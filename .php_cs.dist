@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @link https://github.com/FriendsOfPHP/PHP-CS-Fixer
+ */
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__)
+    ->exclude('var')
+;
+
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@Symfony'                   => true,
+        'declare_strict_types'       => true,
+        #'native_function_invocation' => true,
+        'binary_operator_spaces'     => [
+            'align_double_arrow'     => true,
+        ],
+    ])
+    ->setFinder($finder)
+;
